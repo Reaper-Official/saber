@@ -1,99 +1,128 @@
-/* Global settings */
-body {
+/* RESET + Base */
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
+}
+
+body {
   font-family: 'Orbitron', sans-serif;
-  background-color: #0b0f14;
-  color: #e0e0e0;
+  background-color: #0a0f0a;
+  color: #c0cfc0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 50, 0, 0.1) 0,
+    rgba(0, 50, 0, 0.1) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  background-size: 20px 20px;
   line-height: 1.6;
 }
 
+/* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  background-color: rgba(0, 10, 0, 0.8);
+  border: 2px solid #1a2f1a;
+  box-shadow: 0 0 40px rgba(0, 255, 0, 0.1);
+  border-radius: 10px;
 }
 
-/* Hero header */
+/* Header - Tactical Grid Style */
 .hero {
+  background: #0d140d;
+  border-bottom: 3px solid #3af53a;
   text-align: center;
-  padding: 4rem 2rem;
-  background: linear-gradient(to bottom, #1b2028, #12161d);
-  border-bottom: 4px solid #28a745;
-  box-shadow: 0 0 20px rgba(40, 167, 69, 0.4);
+  padding: 3rem 2rem;
+  position: relative;
+  animation: header-glow 3s infinite ease-in-out;
+}
+
+@keyframes header-glow {
+  0%, 100% { box-shadow: 0 0 10px #3af53a; }
+  50% { box-shadow: 0 0 30px #3af53a; }
 }
 
 .hero h1 {
   font-size: 4rem;
-  color: #28a745;
-  margin-bottom: 0.5rem;
-  letter-spacing: 4px;
-  text-shadow: 0 0 10px #28a745;
+  color: #3af53a;
+  letter-spacing: 6px;
+  text-shadow: 0 0 10px #3af53a;
+  text-transform: uppercase;
 }
 
-.subtitle {
-  font-size: 1.3rem;
-  color: #ccc;
-  margin-bottom: 0.5rem;
-}
-
-.tagline {
-  font-size: 1rem;
-  color: #aaa;
+.subtitle, .tagline {
+  color: #aaffaa;
+  margin-top: 0.5rem;
   font-style: italic;
 }
 
 /* Sections */
 .content section {
-  background-color: #12161d;
-  border-left: 5px solid #28a745;
+  background-color: #111911;
+  border-left: 5px solid #3af53a;
   padding: 2rem;
-  margin-bottom: 2rem;
-  border-radius: 6px;
-  box-shadow: 0 0 15px rgba(0,255,100,0.1);
-  transition: transform 0.3s ease;
+  margin: 2rem 0;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s;
 }
 
 .content section:hover {
   transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(58, 245, 58, 0.2);
 }
 
 h2 {
-  color: #28a745;
-  font-size: 1.8rem;
+  color: #3af53a;
+  font-size: 1.6rem;
+  border-bottom: 2px dashed #3af53a;
   margin-bottom: 1rem;
-  border-bottom: 2px solid #28a745;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  text-transform: uppercase;
 }
 
+/* Bullet styling like mission logs */
 ul {
   list-style: none;
-  padding-left: 0;
+  padding: 0;
+  margin-left: 1rem;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 ul li::before {
-  content: "⟶ ";
-  color: #28a745;
+  content: "[•]";
+  position: absolute;
+  left: 0;
+  color: #3af53a;
   font-weight: bold;
-  padding-right: 0.5rem;
 }
 
-/* Emphasis */
+/* Important points */
 strong {
-  color: #f0f0f0;
+  color: #f4f4f4;
 }
 
 /* Footer */
 .footer {
+  margin-top: 4rem;
+  padding: 1rem;
   text-align: center;
-  padding: 1.5rem;
-  background-color: #0b0f14;
-  font-size: 0.9rem;
-  color: #555;
-  border-top: 1px solid #222;
+  background-color: #0a0f0a;
+  color: #556;
+  font-size: 0.85rem;
+  border-top: 1px dashed #3af53a;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Responsive grid */
+@media screen and (max-width: 768px) {
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -101,21 +130,4 @@ strong {
   .content section {
     padding: 1rem;
   }
-}
-
-/* Subtle animated border glow effect */
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 10px #28a745;
-  }
-  50% {
-    box-shadow: 0 0 20px #28a745;
-  }
-  100% {
-    box-shadow: 0 0 10px #28a745;
-  }
-}
-
-.hero {
-  animation: glow 2s infinite ease-in-out;
 }
