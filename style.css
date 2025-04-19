@@ -1,73 +1,63 @@
-body {
-  background: #0d0d0d;
-  color: #e2e2e2;
-  font-family: 'Orbitron', sans-serif;
-  margin: 0;
-  padding: 0;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>S.A.B.E.R. | Unité Robotisée Tactique</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <h1>S.A.B.E.R.</h1>
+      <p class="subtitle">Security Autonomous Bot for Emergency Response</p>
+      <p class="tagline">Unité robotisée tactique autonome pour opérations sensibles</p>
+    </header>
 
-.hero {
-  background: linear-gradient(to bottom, #111, #000);
-  text-align: center;
-  padding: 4rem 2rem;
-  border-bottom: 2px solid #1f1f1f;
-}
+    <main class="content">
+      <section>
+        <h2>🔍 Mission</h2>
+        <p>S.A.B.E.R. assure la protection, la surveillance et l'intervention tactique dans les zones à haut risque (datacenters, sites militaires, etc.).</p>
+      </section>
 
-.hero h1 {
-  font-size: 4rem;
-  color: #ff1e1e;
-  letter-spacing: 0.3rem;
-  text-shadow: 0 0 10px #900;
-}
+      <section>
+        <h2>⚙️ Capacités Clés</h2>
+        <ul>
+          <li>Mobilité tout-terrain (escaliers, gravats, sols instables)</li>
+          <li>Armement non-létal et létal (Glock .45ACP sécurisé)</li>
+          <li>Détection d'armes, comportements suspects, visages</li>
+          <li>12h d'autonomie + dock de recharge automatique</li>
+          <li>Apparence intimidante, blindage balistique</li>
+          <li>Contrôle local ou à distance via R.E.A.P.E.R.</li>
+        </ul>
+      </section>
 
-.subtitle {
-  font-size: 1.5rem;
-  color: #ccc;
-  margin-top: 0.5rem;
-}
+      <section>
+        <h2>📦 Spécifications Techniques</h2>
+        <ul>
+          <li><strong>Processeur :</strong> Jetson Nano / Raspberry Pi 5</li>
+          <li><strong>Navigation :</strong> Lidar 360°, IR, capteurs ultrason</li>
+          <li><strong>Batterie :</strong> LiPo 4S – 5000mAh</li>
+          <li><strong>Blindage :</strong> Polycarbonate balistique, alliage renforcé</li>
+          <li><strong>Communication :</strong> Système sécurisé R.E.A.P.E.R. (canal chiffré)</li>
+        </ul>
+      </section>
 
-.intro {
-  max-width: 700px;
-  margin: 1rem auto;
-  color: #aaa;
-  font-style: italic;
-}
+      <section>
+        <h2>🔐 R.E.A.P.E.R.</h2>
+        <p>REmote Autonomous Protocol for Encrypted Relay – Un système de communication sécurisé permettant le contrôle, la transmission d’alertes et la prise de décisions à distance, sans risque d’interception.</p>
+      </section>
 
-.section {
-  padding: 3rem 2rem;
-  border-bottom: 1px solid #222;
-  max-width: 1000px;
-  margin: 0 auto;
-}
+      <section>
+        <h2>🚀 Objectif</h2>
+        <p>Créer une force robotique autonome fiable, rapide, et capable de neutraliser ou dissuader toute menace avec précision.</p>
+      </section>
+    </main>
 
-.section h2 {
-  color: #a10;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.section ul {
-  list-style-type: square;
-  padding-left: 1.5rem;
-  color: #ddd;
-}
-
-.specs {
-  display: flex;
-  gap: 3rem;
-  flex-wrap: wrap;
-}
-
-.specs ul {
-  flex: 1;
-  min-width: 250px;
-}
-
-.footer {
-  text-align: center;
-  padding: 2rem;
-  background: #101010;
-  color: #555;
-  font-size: 0.9rem;
-}
+    <footer class="footer">
+      &copy; 2025 Projet S.A.B.E.R. – Propulsé par le système R.E.A.P.E.R.
+    </footer>
+  </div>
+</body>
+</html>
